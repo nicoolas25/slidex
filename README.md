@@ -5,6 +5,26 @@ This a a small slideshow generator based on a Ruby DSL.
 The purpose of this experiment is to introduce the concept of 'frames'
 as the excellent beamer does it.
 
+## Usage
+
+Since the project has no dependencies Bundler isn't used yet and since
+the project isn't mature there is no gemspec either.
+
+To experiment with the actual code you can:
+
+```ruby
+# Include the Slidex module
+require 'slidex'
+include Slidex
+
+# Declare your slideshow (see the exemple)
+# ...
+
+# Output the resulting html body
+root.to_html
+```
+
+
 ## Example
 
 The following code will produce a slide with 3 frames. On the first one,
@@ -36,3 +56,9 @@ things are missing:
 * A decent stylesheet
 * The Javascript to do the transition between frames
 * A robust HTML generator based (visitor pattern)
+* New nodes like `code`
+* Options for the nodes like `center`
+
+## Enchancements
+
+* Advanced navigation that lists the slides
